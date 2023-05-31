@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  margin-bottom: 96px;
+}
+
+.header_logo {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.growbe {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.memu {
+  padding-top: 11px;
+  padding-bottom: 12px;
+}
+.header {
+  margin-top: 40px;
+  margin-bottom: 84px;
+}
+
+.top_content {
+  margin-top: 84px;
+  margin-bottom: 162px;
+}
+
+.subtitle {
+  margin-bottom: 17px;
+}
+
+.text {
+  margin-bottom: 52px;
+}
+
+.top_buttons {
+  margin-top: 37px;
+  margin-bottom: 162px;
+}
+
+.top_logos {
+  margin-top: 97px;
+}
