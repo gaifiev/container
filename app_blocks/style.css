@@ -4,46 +4,54 @@
 }
 
 .top {
-  margin-bottom: 96px;
   max-width: 1920px;
   margin: 0 auto;
 }
 
 .center {
-  padding-left: calc(50% - 585px);
-  padding-right: calc(50% - 585px);
+  padding-left: calc(50% - 640px);
+  padding-right: calc(50% - 640px);
 }
 
 .header {
   margin-top: 40px;
   margin-bottom: 84px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .header_logo {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .growbe {
   padding-top: 5px;
   padding-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .menu {
   padding-top: 11px;
   padding-bottom: 12px;
-  margin-left: auto;
+  height: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
 }
 
 .header_link {
   font-size: 14px;
   line-height: 16px;
-  margin-left: 25px;
   text-decoration: none;
   color: #000;
+  font-family: "Gilroy-Bold";
 }
 
 .header_link:hover {
@@ -54,7 +62,7 @@
   margin-top: 84px;
   margin-bottom: 162px;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 
 .top_info {
@@ -65,11 +73,8 @@
 
 .top_photo {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.photo {
-  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .subtitle {
@@ -78,6 +83,7 @@
   font-size: 60px;
   line-height: 70px;
   color: #000000;
+  font-family: "Gilroy-Bold";
 }
 
 .text {
@@ -86,6 +92,7 @@
   font-size: 20px;
   line-height: 23px;
   color: #888888;
+  font-family: "Gilroy-Bold";
 }
 
 .top_buttons {
@@ -106,6 +113,8 @@
   background: #f25822;
   box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
   border-radius: 50px;
+  border-width: 0px;
+  font-family: "Gilroy-Bold";
 }
 
 .button_video {
@@ -115,12 +124,254 @@
   display: flex;
   align-items: center;
   margin-left: 72px;
+  font-family: "Gilroy-Bold";
 }
 
 .top_logos {
   margin-top: 97px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo_foot {
-  margin-left: 30px;
+  font-family: "Gilroy-Bold";
+}
+
+.perfect {
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.info_perfect {
+  color: #000000;
+  font-family: "Gilroy-Regular";
+  font-size: 45px;
+  line-height: 100%;
+  width: 409px;
+}
+
+.info_align {
+  color: #888888;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  line-height: 150%;
+  vertical-align: top;
+  width: 515px;
+  margin-top: 20px;
+}
+
+.first_button {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.button_learn {
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  width: 140px;
+  height: 50px;
+  background: #f25822;
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  border-radius: 50px;
+  border-width: 0px;
+  font-family: "Gilroy-Bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_mac {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mac {
+  width: 700px;
+}
+
+.three_blocks {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.vector {
+  width: 70px;
+  height: 70px;
+  background: rgba(242, 88, 34, 0.25);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.three_titles {
+  width: 215px;
+  height: 30px;
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+
+.leverage {
+  width: 310px;
+  height: 42px;
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  color: #666666;
+  margin-bottom: 25px;
+}
+
+.button_read {
+  width: 64px;
+  height: 17px;
+  font-family: "Gilroy-Bold";
+  font-size: 11px;
+  line-height: 150%;
+  color: #000000;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.lightning {
+  width: 70px;
+  height: 70px;
+  background: rgba(20, 146, 17, 0.28);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 205, 29, 0.24);
+  border-radius: 15px;
+}
+
+.should {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chosse {
+  width: 579px;
+  height: 56px;
+  font-family: "Gilroy-Bold";
+  font-size: 45px;
+  line-height: 53px;
+  color: #000000;
+  margin-bottom: 19px;
+}
+
+.distinctively {
+  width: 682px;
+  height: 48px;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #666666;
+}
+
+.three_cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cards_blocks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card_photo {
+  width: 396px;
+}
+
+.title_choose {
+  width: 204px;
+  height: 30px;
+  font-family: "Gilroy-Bold";
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  width: 208px;
+}
+
+.comment {
+  width: 310px;
+  height: 63px;
+  font-family: "Gilroy-Regular";
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: #aaaaaa;
+  margin-top: 22px;
+  margin-bottom: 39px;
+}
+
+.learn_more_button {
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  width: 140px;
+  height: 50px;
+  background: #f25822;
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  border-radius: 50px;
+  border-width: 0px;
+  font-family: "Gilroy-Bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.keyword {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.optimization {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
