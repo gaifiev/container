@@ -7,11 +7,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.centerHeader {
-  padding-left: calc(50% - 570px);
-  padding-right: calc(50% - 570px);
-}
-
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -20,6 +15,10 @@ body {
 .centerInfo {
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
+}
+
+.top {
+  padding-bottom: 60px;
 }
 
 .header {
@@ -34,11 +33,14 @@ body {
 
 .menu {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 .menu_left {
   display: flex;
+  justify-content: flex-start;
   padding-top: 18px;
   width: 118px;
 }
@@ -56,24 +58,19 @@ body {
 
 .menu_right {
   display: flex;
+  justify-content: flex-end;
   padding-top: 18px;
-  width: 111px;
-}
-
-.three_menu {
-  display: flex;
+  gap: 33px;
 }
 
 .three_lines {
   width: 32px;
   cursor: pointer;
-  margin-right: 33px;
 }
 
 .user {
   width: 29px;
   cursor: pointer;
-  margin-right: 33px;
 }
 
 .basket {
@@ -83,54 +80,52 @@ body {
 
 .top_info {
   background: #f1e4e6;
-  height: 764px;
-}
-
-.two {
-  display: flex;
 }
 
 .top_photo {
   width: 800px;
   display: flex;
+  width: 50%;
 }
 
 .title {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 50%;
 }
 
-.centerTrend {
-  padding-left: calc(50% - 570px);
-  padding-right: calc(50% - 570px);
-}
-
-.trend {
+.content_trend {
   background: #ffffff;
 }
 
-h1:after {
-  content: attr(data-text);
-  color: #f16d7f;
-  transform: translateX(3%);
-  position: absolute;
+.two {
+  display: flex;
+}
+
+.inside_title {
+  padding-left: 16px;
+  border-left: #f16d7f solid 12px;
 }
 
 .name_1 {
-  font-family: "Lato";
   font-style: normal;
   font-weight: 900;
   font-size: 48px;
   line-height: 58px;
   color: #222222;
-  width: 377px;
-  height: 93px;
 }
 
-.inside_title {
-  width: 12px;
-  margin-right: 16px;
+.name_2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+.red {
+  color: #f16d7f;
 }
 
 .four_blocks {
@@ -142,7 +137,7 @@ h1:after {
   gap: 30px;
 }
 
-.insAll {
+.inside_All {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -304,4 +299,91 @@ h2:after {
   padding-left: 38.5px;
   padding-right: 38.5px;
   background: #ffffff;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .two {
+    justify-content: center;
+  }
+
+  .photo_info {
+    width: 386px;
+    height: 368px;
+  }
+
+  .inside_title {
+    height: 78px;
+  }
+
+  .name_1 {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 53px;
+  }
+
+  .name_2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .four_blocks {
+    gap: 19px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .inside_All {
+    width: 232px;
+  }
+
+  .first_block {
+    width: 232px;
+  }
+
+  .two_block {
+    width: 232px;
+  }
+
+  .three_block {
+    width: 232px;
+  }
+
+  .photo_women {
+    width: 232px;
+    height: 168px;
+  }
+
+  .four_block {
+    height: 116px;
+  }
+
+  .photo_men {
+    width: 232px;
+    height: 168px;
+  }
+
+  .photo_kids {
+    width: 232px;
+    height: 168px;
+  }
+
+  .long_photo {
+    width: 735px;
+  }
+
+  .top {
+    padding-bottom: 70px;
+  }
+
+  .card_items {
+    gap: 16px;
+    justify-content: center;
+  }
 }
