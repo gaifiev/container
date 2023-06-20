@@ -270,7 +270,7 @@ body {
 }
 
 .card_photo {
-  width: 100%;
+  width: 343px;
   height: auto;
   max-width: 100%;
 }
@@ -413,7 +413,7 @@ body {
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 12px;
     max-width: 100%;
   }
 
@@ -470,17 +470,13 @@ body {
   }
 
   .card_photo {
-    width: 100%;
+    width: 343px;
     height: auto;
     max-width: 100%;
   }
 
-
   .subtitle_card {
-    width: 100%;
-  }
-
-  .card { 
+    max-width: 314px;
     width: 100%;
   }
 }
