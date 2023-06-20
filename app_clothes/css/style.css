@@ -71,6 +71,7 @@ body {
 .user {
   width: 29px;
   cursor: pointer;
+  display: flex;
 }
 
 .basket {
@@ -143,7 +144,7 @@ body {
   justify-content: center;
   align-items: center;
   filter: brightness(70%);
-  width: 360px;
+  width: 100%;
 }
 
 .forall {
@@ -162,13 +163,16 @@ body {
   height: 50px;
 }
 
-h2:after {
-  content: attr(data-text);
+.big_text {
   color: #f16d7f;
-  transform: translateX(0%);
-  transform: translateY(0%);
   font-size: 18px;
   font-weight: bold;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .four_block {
@@ -178,6 +182,7 @@ h2:after {
 .four_blocks {
   margin-top: 65px;
   margin-bottom: 96px;
+  max-width: 100%;
 }
 
 .products {
@@ -265,26 +270,9 @@ h2:after {
 }
 
 .card_photo {
-  width: 360px;
-  height: 420px;
-}
-
-.card_ph {
-  width: 142px;
-  height: 400px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 108px;
-  margin-top: 9px;
-  margin-bottom: 11px;
-  margin-right: 110px;
-}
-
-.card2 {
-  background: #f7e4e2;
-  width: 360px;
-  height: 420px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .button_browse {
@@ -337,10 +325,7 @@ h2:after {
     gap: 19px;
     padding-left: 16px;
     padding-right: 16px;
-  }
-
-  .inside_All {
-    width: 232px;
+    justify-content: center;
   }
 
   .first_block {
@@ -355,23 +340,14 @@ h2:after {
     width: 232px;
   }
 
-  .photo_women {
-    width: 232px;
-    height: 168px;
+  .img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 
   .four_block {
     height: 116px;
-  }
-
-  .photo_men {
-    width: 232px;
-    height: 168px;
-  }
-
-  .photo_kids {
-    width: 232px;
-    height: 168px;
   }
 
   .long_photo {
@@ -385,5 +361,126 @@ h2:after {
   .card_items {
     gap: 16px;
     justify-content: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .user,
+  .basket {
+    display: none;
+  }
+
+  .top_info {
+    max-width: 100%;
+    height: 363px;
+  }
+
+  .two {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top_photo {
+    display: none;
+  }
+
+  .title {
+    padding-top: 148px;
+    padding-bottom: 149px;
+    display: flex;
+    width: auto;
+  }
+
+  .name_1 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  .name_2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .four_block {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .four_blocks {
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .long_photo {
+    width: auto;
+    height: auto;
+  }
+
+  .forall {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 160px;
+    max-height: 50px;
+  }
+
+  .big_text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .top {
+    padding-bottom: 85px;
+  }
+
+ .cards {
+    padding-bottom: 41px;
+  }
+
+  .fetured_item {
+    max-width: 100%;
+  }
+
+  .shop {
+    max-width: 100%;
+  }
+
+  .card_items {
+    padding-top: 65px;
+    gap: 15px;
+    max-width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .card_photo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+
+  .subtitle_card {
+    width: 100%;
+  }
+
+  .card { 
+    width: 100%;
   }
 }
