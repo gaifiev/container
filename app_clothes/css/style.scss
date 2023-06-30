@@ -963,13 +963,7 @@ body {
   }
 
   &__item-left {
-    display: flex;
-    width: 47px;
-    height: 47px;
-    background-color: rgba(42, 42, 42, 0.15);
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include item-arrow;
   }
 
   &__item-center {
@@ -982,13 +976,7 @@ body {
   }
 
   &__item-right {
-    display: flex;
-    width: 47px;
-    height: 47px;
-    background-color: rgba(42, 42, 42, 0.15);
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include item-arrow;
   }
 
   &__btn-slide &__svg-arrow:hover {
