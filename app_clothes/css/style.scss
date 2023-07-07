@@ -29,9 +29,6 @@ summary {
   display: block;
 }
 
-// .top {
-//   overflow: hidden;
-// }
 
 summary::-webkit-details-marker {
   display: none;
@@ -454,6 +451,12 @@ summary::-webkit-details-marker {
   &__card {
     position: relative;
     background: #f8f8f8;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: translateY(0.05em);
+      box-shadow: 0.1em 0.1em 0.5em 0em;
+    }
   }
 
   &__overlay {
@@ -552,23 +555,23 @@ summary::-webkit-details-marker {
   }
 
   &__button-browse {
-    border: 1px solid #ff6a6a;
+    border: 1px solid $colorTextIntensePurplishPink;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #f26376;
+    color: $colorTextIntensePurplishPink;
     padding-top: 14.5px;
     padding-bottom: 13.5px;
     padding-left: 38.5px;
     padding-right: 38.5px;
     background: #ffffff;
-    transition: 0.5s;
-  }
-
-  &__button-browse:hover {
-    background-color: #ff6a6a;
-    color: #e1e1e1;
+    transition: all 0.5s;
+    &:hover {
+      box-shadow: inset 0 1.5em 0em 0em $colorTextIntensePurplishPink, inset 0 -1.5em 0em 0em $colorTextIntensePurplishPink;
+      border-color: $colorTextIntensePurplishPink;
+      color: #fff;
+    }
   }
 }
 
@@ -1335,6 +1338,25 @@ summary::-webkit-details-marker {
     height: 306px;
     box-shadow: 17px 19px 24px 0px #00000021;
     display: flex;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: translateY(0.05em);
+      box-shadow: 0.1em 0.1em 0.5em 0em;
+    }
+  }
+
+  &__svg {
+    top: 28px;
+    left: 612px;
+    right: 22px;
+    bottom: 260px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: #575757;
+    cursor: pointer;
   }
 
   &__box-text {
@@ -1350,7 +1372,7 @@ summary::-webkit-details-marker {
     font-weight: 400;
     line-height: 29px;
     text-align: left;
-    font-family: "Lato";
+    font-family: "lato";
     margin-bottom: 42px;
   }
 
@@ -1370,6 +1392,11 @@ summary::-webkit-details-marker {
     margin-left: 24px;
   }
 
+  &__count-input::-webkit-outer-spin-button,
+  &__count-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
   &__price {
     color: $colorTextIntensePurplishPink;
   }
@@ -1386,18 +1413,21 @@ summary::-webkit-details-marker {
     background-color: #ffffff;
     padding: 17px 41px 16px 39px;
     text-transform: uppercase;
-    font-family: "Lato";
+    font-family: "lato";
     font-size: 14px;
     font-weight: 300;
     line-height: 17px;
     text-align: left;
     cursor: pointer;
-    transition: 0.5s;
 
+    border-color: $colorTextIntensePurplishPink;
+    color: $colorTextIntensePurplishPink;
     &:hover {
-      background-color: $colorTextIntensePurplishPink;
-      color: #FFFFFF;
-      border: none;
+      color: #fff;
+      transition-delay: 0.2s;
+      animation: balloons 1s forwards;
+      background: radial-gradient(circle, $colorTextIntensePurplishPink 0.2em, transparent 0.3em) 6em 6em/1em 1em,
+        radial-gradient(circle, $colorTextIntensePurplishPink 0.2em, transparent 0.3em) 0 0/1em 1em;
     }
   }
 
@@ -1406,19 +1436,22 @@ summary::-webkit-details-marker {
     background-color: #ffffff;
     padding: 17px 41px 16px 39px;
     text-transform: uppercase;
-    font-family: "Lato";
+    font-family: "lato";
     font-size: 14px;
     font-weight: 300;
     line-height: 17px;
     text-align: left;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.5s;
 
+    border-color: $colorTextIntensePurplishPink;
+    color: $colorTextIntensePurplishPink;
     &:hover {
-      background-color: $colorTextIntensePurplishPink;
-      color: #FFFFFF;
-      border: none;
+      color: #fff;
+      transition-delay: 0.2s;
+      animation: balloons 1s forwards;
+      background: radial-gradient(circle, $colorTextIntensePurplishPink 0.2em, transparent 0.3em) 6em 6em/1em 1em,
+        radial-gradient(circle, $colorTextIntensePurplishPink 0.2em, transparent 0.3em) 0 0/1em 1em;
     }
   }
 
@@ -1431,7 +1464,7 @@ summary::-webkit-details-marker {
   }
 
   &__title-form {
-    font-family: "Lato";
+    font-family: "lato";
     font-size: 16px;
     font-weight: 300;
     line-height: 19px;
@@ -1468,10 +1501,14 @@ summary::-webkit-details-marker {
     cursor: pointer;
     transition: 0.5s;
 
+    border-color: $colorTextIntensePurplishPink;
+    color: $colorTextIntensePurplishPink;
+    box-shadow: $offset $offset 0 $colorTextIntensePurplishPink;
     &:hover {
+      box-shadow: (-$offset) (-$offset) 0 $colorEAEAEA;
       background-color: $colorTextIntensePurplishPink;
-      color: #FFFFFF;
-      border: none;
+      border-color: $colorTextIntensePurplishPink;
+      color: #fff;
     }
   }
 
@@ -1522,19 +1559,65 @@ summary::-webkit-details-marker {
     line-height: 19px;
     text-align: center;
     margin-right: 43px;
-    background-color: white;
+    background-color: $colorTextIntensePurplishPink;
+    color: #ffffff;
     transition: 0.5s;
-    border-color: #ff6a6a;
-    
-    &:hover {
-      background-color: $colorTextIntensePurplishPink;
-      color: #FFFFFF;
-      border: none;
+    border: none;
+    cursor: pointer;
+    background: #f16d7f;
+    background: linear-gradient(90deg, #f16d7f 0%, #f16d7f 100%);
+    border: none;
+    box-shadow: 12px 12px 24px #f16d7f;
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    position: relative;
+    padding: 10px;
+
+    &::before {
+      content: "";
+      box-shadow: 0 0 60px #f16d7f;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover,
+    &:focus {
+      color: $colorEAEAEA;
+      transform: translateY(-6px);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid #f16d7f;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      animation: none;
+      display: none;
     }
   }
 
   hr {
-    color: #FFFFFF;
+    color: #ffffff;
     width: 275px;
     height: 1px;
     margin-left: 43px;
