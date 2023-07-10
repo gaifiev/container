@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="header__user">
-                            <a href="#"><img src="img/header/user.svg" alt="pin" /></a>
+                            <a href="./registration.html"><img src="img/header/user.svg" alt="pin" /></a>
                         </div>
                         <div class="header__basket">
                             <a href="./basket.html"><img src="img/header/basket.svg" alt="pin" /></a>
@@ -80,8 +80,8 @@
                             <h1 class="breadcrumb__title-left">new arrivals</h1>
                         </div>
                         <div class="breadcrumb__item-right">
-                            <h1 class="breadcrumb__title-right">
-                                home / men /
+                            <h1 class="breadcrumb__title-right"><a class="breadcrumb__link-home" href="./index.html">home</a>
+                                / men /
                                 <span class="breadcrumb__title-span">new arrivals</span>
                             </h1>
                         </div>
@@ -89,7 +89,7 @@
                 </div>
             </section>
             <section class="filter-sort center">
-                <details class="filter-sort__filter" open>
+                <details class="filter-sort__filter">
                     <summary class="filter-sort__summary"><span class="filter-sort__span-text">filter</span>
                         <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -98,7 +98,7 @@
                         </svg>
                     </summary>
                     <div class="filter-sort__content">
-                        <details open class="filter-sort__item">
+                        <details class="filter-sort__item">
                             <summary class="filter-sort__text-category">category</summary>
                             <div class="filter-sort__link-box">
                                 <a href="#" class="filter-sort__link">Accessories</a>
@@ -530,7 +530,7 @@
                             <form name="subscribe__subscribe-form" action="#">
                                 <div class="subscribe__sub-button">
                                     <input class="subscribe__input subscribe__input-email" type="email"
-                                        placeholder="Enter Your Email" />
+                                        placeholder="Enter Your Email" required/>
                                     <input class="subscribe__input subscribe__input-submit" type="submit"
                                         value="Subscribe" />
                                 </div>

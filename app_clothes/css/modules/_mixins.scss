@@ -8,21 +8,3 @@
   align-items: center;
 }
 
-@keyframes balloons {
-  100% {
-    background-size: 2.375em 2.375em, 0.1em 0.1em;
-  }
-}
-
-@keyframes ring {
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 1;
-  }
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
-  }
-}
