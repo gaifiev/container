@@ -1332,7 +1332,10 @@ summary::-webkit-details-marker {
 
   &__btn-add:hover {
     background-color: #ff6a6a;
-    color: #e1e1e1;
+    color: #fff;
+    .product-description__svg-btn1 {
+      fill: #fff;
+    }
   }
 
   &__svg-btn {
