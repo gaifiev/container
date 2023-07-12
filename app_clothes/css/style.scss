@@ -305,6 +305,7 @@ summary::-webkit-details-marker {
   z-index: 3;
   display: flex;
   box-sizing: border-box;
+  justify-content: flex-start;
 
   &__twoitems {
     display: flex;
