@@ -517,7 +517,6 @@ summary::-webkit-details-marker {
     width: 100%;
     height: 420px;
     transition: background-color 1.5s ease;
-    max-width: 100%;
   }
 
   &__card:hover .cards__overlay {
@@ -562,6 +561,11 @@ summary::-webkit-details-marker {
     opacity: 1;
   }
 
+  &__card-photo {
+    height: auto;
+    max-width: 100%;
+  }
+
   &__price {
     font-style: normal;
     font-weight: 400;
@@ -600,11 +604,6 @@ summary::-webkit-details-marker {
     margin-right: 29px;
   }
 
-  &__card-photo {
-    height: auto;
-    max-width: 100%;
-  }
-
   &__button-browse {
     border: 1px solid $colorTextIntensePurplishPink;
     font-style: normal;
@@ -637,11 +636,7 @@ summary::-webkit-details-marker {
   padding: 12px 16px 13px 16px;
   margin-top: 18px;
 
-  li {
-    display: inline;
-  }
-
-  li:not(:last-child) {
+  .cards__links:not(:last-child) {
     margin: 0 15px 0 0;
   }
 
@@ -867,6 +862,10 @@ summary::-webkit-details-marker {
   &__social:hover &__icon {
     fill: #ffffff;
   }
+
+  &__icon:hover path {
+    fill: #fff;
+  }
 }
 
 .breadcrumb {
@@ -1082,8 +1081,10 @@ summary::-webkit-details-marker {
   }
 
   &__box {
-    width: 652px;
-    height: 306px;
+    max-width: 652px;
+    width: 100%;
+    max-height: 306px;
+    height: 100%;
     box-shadow: 17px 19px 24px 0px #00000021;
     display: flex;
     position: relative;
@@ -1097,7 +1098,7 @@ summary::-webkit-details-marker {
 
   &__svg {
     top: 28px;
-    left: 612px;
+    margin-right: 0px;
     right: 22px;
     bottom: 260px;
     position: absolute;
@@ -1112,6 +1113,9 @@ summary::-webkit-details-marker {
     margin-bottom: 62px;
     margin-left: 31px;
     margin-right: 97px;
+    a {
+      text-decoration: none !important;
+    }
   }
 
   &__title {
@@ -1120,8 +1124,9 @@ summary::-webkit-details-marker {
     font-weight: 400;
     line-height: 29px;
     text-align: left;
-    font-family: "lato";
+    font-family: "Lato";
     margin-bottom: 42px;
+    text-decoration: none;
   }
 
   &__text-span {
@@ -1234,6 +1239,8 @@ summary::-webkit-details-marker {
     text-align: left;
     padding-left: 18px;
     color: #222222;
+    padding-right: 18px;
+    box-sizing: border-box;
   }
 
   &__button-form {
@@ -1405,7 +1412,6 @@ summary::-webkit-details-marker {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    width: 360px;
   }
 
   &__title-form-1 {
@@ -1427,7 +1433,7 @@ summary::-webkit-details-marker {
   }
 
   &__input-form {
-    width: 360px;
+    width: 342px;
     height: 45px;
     border: 1px solid #a4a4a4;
     font-family: "Lato";
@@ -1436,6 +1442,13 @@ summary::-webkit-details-marker {
     line-height: 16px;
     padding-left: 18px;
     color: #b1b1b1;
+    padding-right: 18px;
+    box-sizing: border-box;
+    &:focus {
+      color: #000000;
+      outline: 1px solid $colorTextIntensePurplishPink;
+      border: none;
+    }
   }
 
   &__input-flag {
@@ -1545,8 +1558,6 @@ summary::-webkit-details-marker {
     display: flex;
     flex-direction: column;
     margin-left: 128px;
-    width: 652px;
-    height: 334px;
   }
 
   &__title-desc {
@@ -1737,8 +1748,6 @@ summary::-webkit-details-marker {
   }
 
   .registration__description {
-    width: 354px;
-    height: 337px;
     margin-left: 22px;
   }
 
@@ -1796,9 +1805,6 @@ summary::-webkit-details-marker {
     flex-direction: row;
   }
 
-  .basketcard__svg {
-    left: 692px;
-  }
   .basketcard__buttons {
     width: 508px;
   }
@@ -1829,7 +1835,7 @@ summary::-webkit-details-marker {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .header {
     max-width: 100%;
     padding-left: 16px;
@@ -1837,7 +1843,7 @@ summary::-webkit-details-marker {
   }
 
   .header__drop-down {
-    left: -202px;
+    left: -190px;
   }
 
   .header__user,
@@ -1912,10 +1918,6 @@ summary::-webkit-details-marker {
   .content-trend__text {
     font-size: 24px;
     line-height: 29px;
-  }
-
-  .cards {
-    padding-bottom: 41px;
   }
 
   .cards__fetured-item {
@@ -2015,5 +2017,380 @@ summary::-webkit-details-marker {
 
   .footer__icons {
     margin-bottom: 40px;
+  }
+
+  // регистрация
+  .breadcrumb-registration {
+    display: flex;
+    align-items: center;
+  }
+
+  .registration__item {
+    display: flex;
+  }
+  .registration {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .registration__input-form {
+    max-width: 359px;
+    width: 100%;
+  }
+
+  .registration__form {
+    width: 100%;
+    
+  }
+
+  .registration__forms {
+    margin-bottom: 40px;
+  }
+
+  .registration__text {
+    width: 100%;
+    max-width: 359px;
+    box-sizing: border-box;
+  }
+
+  .registration__description {
+    margin-left: 8px;
+  }
+
+  .breadcrumb__new-items {
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 24px;
+    padding-bottom: 46px;
+  }
+
+  .breadcrumb__item-left {
+    margin-bottom: 32px;
+  }
+
+  // адаптив фильтр сорт
+  .filter-sort {
+    margin-right: 8px;
+    padding-top: 24px;
+    justify-content: space-between;
+    height: 0;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  .filter-sort__summary svg {
+    width: 38px;
+    height: 25px;
+  }
+
+  .filter-sort__span-text {
+    display: none;
+  }
+
+  .carditems {
+    margin-top: 40px;
+  }
+
+  .carditem {
+    padding-top: 0;
+  }
+
+  .filter-sort__text-sort {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .textsort {
+    width: 85px;
+    height: 14px;
+  }
+
+  .filter-sort__sort-summary svg {
+    width: 8px;
+    height: 4px;
+  }
+
+  .filter-sort__filter {
+    width: 222px;
+    margin-top: 13px;
+    padding-top: 0;
+  }
+
+  .filter-sort__sort {
+    gap: 20px;
+  }
+
+  .filter-sort__content {
+    width: 190px;
+    position: absolute;
+  }
+
+  .image-slide {
+    height: 100%;
+    padding-bottom: 85px;
+    position: relative;
+  }
+
+  .image-slide__item-left {
+    position: absolute;
+  }
+
+  .image-slide__item-right {
+    position: absolute;
+    right: 12px;
+  }
+
+  .image-slide__item-center {
+    margin: auto;
+  }
+  .image-slide__img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .breadcrumb {
+    height: 100%;
+  }
+  .product-description__title-3 {
+    margin-bottom: 32px;
+  }
+  .product-description__item-3 {
+    width: 100%;
+  }
+
+  .product-description__text {
+    max-width: 100%;
+    min-width: 300px;
+  }
+  .product-description__text-5 {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .product-description__item-4 {
+    margin-top: 32px;
+  }
+  .product-description__item-4 svg {
+    max-width: 100%;
+    min-width: 175px;
+  }
+
+  .product-description__item-5 {
+    margin-bottom: 64px;
+  }
+
+  .product-description__text-5 {
+    margin-right: 12px;
+  }
+
+  .prd-desk-text-5 {
+    margin-right: 0px;
+  }
+
+  // корзина
+
+  .shopping {
+    display: flex;
+    align-items: center;
+  }
+
+  .basketcard {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 0;
+    margin-bottom: 96px;
+  }
+
+  .basketcard__box {
+   img {
+    max-width: 144px;
+    max-height: 188px;
+   }
+  }
+
+  .basketcard__box-text {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    margin-left: 17px;
+    margin-right: 53px;
+}
+
+  .basketcard__cards {
+    margin-top: 39px;
+    margin-bottom: 30px;
+    gap: 32px;
+  }
+  
+  .basketcard__title {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .basketcard__text-span {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .basketcard__count-input {
+    width: 24px;
+    height: 15px;
+  }
+
+  .basketcard__svg {
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    bottom: 0px;
+  }
+
+  .basketcard__count-input {
+    margin-left: 5px;
+  }
+
+  .basketcard__buttons {
+    width: 100%;
+    max-width: 320px;
+    height: 33px;
+    gap: 9px;
+  }
+
+  .basketcard__button-1 {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 0;
+    width: 100%;
+    max-width: 175px;
+    text-align: center;
+  }
+
+  .basketcard__button-2 {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 0;
+    width: 100%;
+    max-width: 175px;
+    text-align: center;
+    padding-top: 9px;
+  }
+
+  .basketcard__form {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .basketcard__input-form {
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+
+  .basketcard__check-form {
+    max-width: 320px;
+    width: 304px;
+    
+    hr {
+      max-width: 273px;
+      width: 100%;
+      margin-right: 14px;
+    }
+  }
+
+  .basketcard__button-check {
+    max-width: 273px;
+    width: 100%;
+    margin-right: 16px;
+  }
+}
+
+@media (width: 375px) {
+  .filter-sort__summary svg {
+    width: 38px;
+    height: 25px;
+  }
+
+  .filter-sort__span-text {
+    display: none;
+  }
+
+  .carditems {
+    margin-top: 40px;
+  }
+
+  .carditem {
+    padding-top: 0;
+  }
+
+  .filter-sort__sort {
+    gap: 20px;
+  }
+
+  .filter-sort__text-sort {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .textsort {
+    width: 96px;
+    height: 14px;
+  }
+
+  .filter-sort__sort-summary svg {
+    width: 10px;
+    height: 5px;
+  }
+
+  .product-description__text-5 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (width: 425px) {
+  .filter-sort__summary svg {
+    width: 38px;
+    height: 25px;
+  }
+
+  .filter-sort__span-text {
+    display: none;
+  }
+
+  .carditems {
+    margin-top: 40px;
+  }
+
+  .carditem {
+    padding-top: 0;
+  }
+
+  .filter-sort__sort {
+    gap: 20px;
+  }
+
+  .filter-sort__text-sort {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .textsort {
+    width: 96px;
+    height: 14px;
+  }
+
+  .filter-sort__sort-summary svg {
+    width: 10px;
+    height: 5px;
+  }
+
+  .product-description__text-5 {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
