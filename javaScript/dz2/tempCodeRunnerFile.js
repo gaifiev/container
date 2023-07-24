@@ -1,0 +1,1 @@
+const number = parseInt(num, 10);
