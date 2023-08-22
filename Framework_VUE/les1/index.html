@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1 class="title">{{ message }}</h1>
+        <h2>{{ sayHello }}</h2>
+        <button v-on:click="changeText">click button</button>
+
+        <h2>Счетчик</h2>
+        <button v-on:click="counter++">increase {{ counter }}</button>
+        <button v-on:click="increase(5, $event)">increase</button>
+        <p>{{ counter }}</p>
+
+
+        <h2 v-on:mousemove="mouseMove($event)">Mouse move {{ x }} - {{ y }}
+            <span v-on:mousemove.stop.prevent></span>stop text</span>
+        </h2>
+
+        <p v-html="bigText"></p>
+
+        <h3 v-if="productAddInCart">Добавить товар в корзину?</h3>
+        <h3 v-else="!productAddInCart">Товар добавлен в корзину</h3>
+        <h3 v-show="productAddInCart">show</h3>
+        <button @click="productAddInCart = !productAddInCart">Add product</button>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                productAddInCart: true,
+                message: 'Hello vue',
+                counter: 0,
+                x: 0,
+                y: 0,
+                bigText: `big text <span>new info</span>`
+            },
+            methods: {
+                mouseMove(event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+
+                },
+                // sayHello() {
+                //     this.message = 'new message';
+                //     return this.message;
+                // }
+
+                changeText() {
+                    this.message = 'Text click'
+                },
+
+                increase(step, event) {
+                    this.counter += step;
+                    console.log(event);
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFERNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+       <button @click="toggle"> {{ isShown ? 'Скрыть' : 'Показать' }}</button>
+       <div v-if="isShown">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dignissimos eum, sequi in accusantium fugit atque iure id. Quod doloremque voluptates hic, itaque esse quam totam error unde ex praesentium.</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
