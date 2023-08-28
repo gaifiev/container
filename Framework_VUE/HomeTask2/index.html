@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFERNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Задание VUE</h1>
+        <p>Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов
+            products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список
+            товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию).
+        </p>
+        <div>
+            <h2>Отображение и сортировки списка товаров</h2>
+            <span style="color: blue;">Сортировать товары по цене:</span>
+            <select v-model="selectSort">
+                <option value="list"></option>
+                <option value="asc">По возрастанию</option>
+                <option style="color: red;" value="desc">По убыванию</option>
+            </select>
+            <ul style="color: green;">
+                <li v-for="product in sortProducts" :key="product.id">
+                    {{ product.name }} - {{ product.price }} RUB.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

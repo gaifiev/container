@@ -193,6 +193,7 @@ body {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .cards__btn:hover {
   background: transparent;
@@ -242,6 +243,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
 }
 .blog__item-follow {
   margin-bottom: 52px;
@@ -251,6 +253,9 @@ body {
   height: 137px;
   gap: 8px;
 }
+.blog .item-text-1 {
+  height: 30px;
+}
 .blog__item-title {
   font-family: "DM Serif Display";
   font-size: 50px;
@@ -258,6 +263,14 @@ body {
   line-height: 63px;
   letter-spacing: 0.02em;
   text-align: center;
+}
+.blog .blog-title {
+  text-align: left;
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: 0.02em;
 }
 .blog__paragraph {
   font-family: "Jost";
@@ -344,11 +357,36 @@ body {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .blog__btn:hover {
   background: transparent;
   color: white;
-  background-color: #ce7c30;
+  background-color: #a0e0fa;
+}
+.blog__pagination {
+  display: flex;
+  gap: 30px;
+}
+.blog__btn-pagination {
+  display: block;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: 1px solid #CDA274;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.blog__btn-pagination:hover {
+  background: transparent;
+  color: white;
+  background-color: #a0e0fa;
 }
 
 .footer {
@@ -361,6 +399,8 @@ body {
 }
 .footer__item {
   width: 258px;
+  display: flex;
+  flex-direction: column;
 }
 .footer__logo {
   display: flex;
@@ -410,4 +450,132 @@ body {
   line-height: 66px;
   letter-spacing: 0.01em;
   text-align: left;
+  text-decoration: none;
+  color: #292F36;
+}
+
+.banner {
+  margin-top: 250px;
+}
+.banner__phon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.banner__photo {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+.banner__news {
+  position: relative;
+  width: 350px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 37px 37px 0px 0px;
+  padding: 41px 78px 41px 78px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner__title {
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.banner__name {
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.banner a {
+  text-decoration: none;
+}
+
+.latest {
+  margin-top: 200px;
+}
+.latest__title-post {
+  margin-bottom: 27px;
+}
+.latest__title-style {
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #292f36;
+}
+.latest__post {
+  display: flex;
+  gap: 65px;
+  border: 1px solid #e7e7e7;
+  padding: 22px;
+  border-radius: 62px;
+  align-items: center;
+}
+.latest__image {
+  border-radius: 50px;
+}
+.latest__item-text {
+  width: 469px;
+  height: 282px;
+  gap: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.latest__title {
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #292f36;
+}
+.latest__text {
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #4d5053;
+}
+.latest__btn-item {
+  display: flex;
+  align-items: center;
+}
+.latest__span {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #4d5053;
+  margin-right: 280px;
+}
+.latest__btn {
+  display: block;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.latest__btn:hover {
+  background: transparent;
+  color: white;
+  background-color: #a0e0fa;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFERNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <p>Вы разрабатываете простое приложение для отображения списка пользователей. У вас есть массив объектов users,
+            где каждый объект представляет одного пользователя с его именем и возрастом. Вам необходимо отобразить
+            каждого пользователя из массива в виде списка на странице.
+        </p>
+        <ul>
+            <li v-for="item in users" :key="users.id">name: {{ item.name }} age:{{ item.age }}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

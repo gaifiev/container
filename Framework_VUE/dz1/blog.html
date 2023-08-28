@@ -18,7 +18,7 @@
             <div class="header__menu">
                 <div class="header__left-item">
                     <div class="header__logo">
-                        <a href="index.html"><img src="./img/header/logo.png" alt="logo"></a>
+                        <a href="./index.html"><img src="./img/header/logo.png" alt="logo"></a>
                     </div>
                     <div class="header__title-logo">
                         <a href="index.html" class="header__link">
@@ -42,143 +42,62 @@
         </div>
     </header>
     <main id="app">
-        <section class="top center">
+        <section class="banner">
             <div class="container">
-                <div class="top__info">
-                    <div class="top__background">
-                        <img class="top__img" src="./img/top-info/mainPhoto.png" alt="mainPhoto">
-                    </div>
-                    <div class="top__item-btn">
-                        <h2 class="top__title">Let Your Home Be Unique</h2>
-                        <p class="top__text">There are many variations of the passages of lorem Ipsum fromavailable,
-                            majority.</p>
-                        <button class="top__btn">Get Started</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cards center">
-            <div class="container">
-                <div class="cards__two-items">
-                    <div class="cards__item-follow">
-                        <div class="cards__item-text">
-                            <h3 class="cards__item-title">Follow Our Projects</h3>
-                            <p class="cards__paragraph">It is a long established fact that a reader will be distracted
-                                by
-                                the of readable content of page lookings at its layouts points.</p>
-                        </div>
+                <div class="banner__phon">
+                    <div class="banner__photo">
+                        <img src="./img/blog/Banner.jpg" alt="photo">
 
                     </div>
-                    <div class="cards__items">
-                        <div class="cards__project">
-                            <img class="cards__photo1" src="./img/cards/card1.png" alt="photo">
-                            <div class="cards__sub-content">
-                                <div class="cards__content">
-                                    <h3 class="cards__title-card">Modern Kitchan</h3>
-                                    <h3 class="cards__textP">Decor / Artchitecture</h3>
-                                </div>
-                                <button class="cards__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-
-                            </div>
+                    <div class="banner__news" v-for="article in articles" :key="article.id">
+                        <h2 class="banner__title">{{ article.title }}</h2>
+                        <div>
+                            <a href="index.html"><span class="banner__name">Home</span></a>
+                            <span class="banner__name">/</span>
+                            <a href="blog.html"><span class="banner__name">Blog</span></a>
                         </div>
-                        <div class="cards__project">
-                            <img class="cards__photo2" src="./img/cards/card2.png" alt="photo">
-                            <div class="cards__sub-content">
-                                <div class="cards__content">
-                                    <h3 class="cards__title-card">Modern Kitchan</h3>
-                                    <h3 class="cards__textP">Decor / Artchitecture</h3>
-                                </div>
-                                <button class="cards__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
 
-                            </div>
-                        </div>
-                        <div class="cards__project">
-                            <img class="cards__photo3" src="./img/cards/card3.png" alt="photo">
-                            <div class="cards__sub-content">
-                                <div class="cards__content">
-                                    <h3 class="cards__title-card">Modern Kitchan</h3>
-                                    <h3 class="cards__textP">Decor / Artchitecture</h3>
-                                </div>
-                                <button class="cards__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-
-                            </div>
-                        </div>
-                        <div class="cards__project">
-                            <img class="cards__photo4" src="./img/cards/card4.png" alt="photo">
-                            <div class="cards__sub-content">
-                                <div class="cards__content">
-                                    <h3 class="cards__title-card">Modern Kitchan</h3>
-                                    <h3 class="cards__textP">Decor / Artchitecture</h3>
-                                </div>
-                                <button class="cards__btn"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
 
             </div>
         </section>
-        <section class="counter center">
-            <div class="counter__items">
-                <div class="counter__item">
-                    <h4 class="counter__title">12</h4>
-                    <h4 class="counter__text">Years Of Experiance</h4>
+        <section class="latest center">
+            <div class="container">
+                <div class="latest__title-post">
+                    <h2 class="latest__title-style">Latest Post</h2>
                 </div>
-                <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274" />
-                </svg>
-                <div class="counter__item">
-                    <h4 class="counter__title">85</h4>
-                    <h4 class="counter__text">Success Project</h4>
-                </div>
-                <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274" />
-                </svg>
+                <div class="latest__post">
+                    <div class="latest__img">
+                        <img class="latest__image" src="./img/blog/Photo.png" alt="photo">
+                    </div>
+                    <div class="latest__item-text">
+                        <h2 class="latest__title">Low Cost Latest Invented Interior Designing Ideas</h2>
+                        <p class="latest__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis
+                            dignissim maximus.posuere in.Contrary to popular belief.
 
-                <div class="counter__item">
-                    <h4 class="counter__title">15</h4>
-                    <h4 class="counter__text">Active Project</h4>
-                </div><svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274" />
-                </svg>
-                <div class="counter__item">
-                    <h4 class="counter__title">95</h4>
-                    <h4 class="counter__text">Happy CUstomers</h4>
+                            Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
+                        <div class="latest__btn-item">
+                            <span class="latest__span">26 December,2022</span>
+                            <button class="latest__btn"><svg width="9" height="17" viewBox="0 0 9 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.77101 15.1855L7.71387 8.49983L1.77101 1.81412" stroke="#292F36"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="blog center">
             <div class="container">
-                <div class="blog__two-items">
-                    <div class="blog__item-follow">
-                        <div class="blog__item-text" v-for="article in articles" :key="article.id">
-                            <h3 class="blog__item-title">{{ article.title }}</h3>
-                            <p class="blog__paragraph">It is a long established fact that a reader will be distracted
-                                by the of readable content of a page when lookings at its layouts the points of using.
-                            </p>
-                        </div>
+                <div class="blog__item-follow">
+                    <div class="blog__item-text item-text-1" v-for="article in articles" :key="article.id">
+                        <h3 class="blog__item-title blog-title">{{ article.title }}</h3>
                     </div>
+                </div>
+                <div class="blog__two-items">
                     <div class="blog__items">
                         <div class="blog__project">
                             <img class="blog__photo" src="./img/cardPagin/cardPagin1.png" alt="photo">
@@ -238,6 +157,73 @@
 
                             </div>
                         </div>
+                    </div>
+                    <div class="blog__items">
+                        <div class="blog__project">
+                            <img class="blog__photo" src="./img/cardPagin/cardPagin4.png" alt="photo">
+                            <button class="blog__btn-design">Kitchan Design</button>
+                            <div class="blog__sub-content">
+                                <div class="blog__content">
+                                    <h3 class="blog__title-card">Let’s Get Solution For Building Construction Work</h3>
+                                </div>
+                                <div class="blog__texts">
+                                    <h3 class="blog__textP">26 December,2022 </h3>
+                                    <button class="blog__btn"><svg width="10" height="20" viewBox="0 0 10 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__project">
+                            <img class="blog__photo" src="./img/cardPagin/cardPagin5.png" alt="photo">
+                            <button class="blog__btn-design">Kitchan Design</button>
+                            <div class="blog__sub-content">
+                                <div class="blog__content">
+                                    <h3 class="blog__title-card">Let’s Get Solution For Building Construction Work</h3>
+                                </div>
+                                <div class="blog__texts">
+                                    <h3 class="blog__textP">26 December,2022 </h3>
+                                    <button class="blog__btn"><svg width="10" height="20" viewBox="0 0 10 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__project">
+                            <img class="blog__photo" src="./img/cardPagin/cardPagin6.png" alt="photo">
+                            <button class="blog__btn-design">Kitchan Design</button>
+                            <div class="blog__sub-content">
+                                <div class="blog__content">
+                                    <h3 class="blog__title-card">Let’s Get Solution For Building Construction Work</h3>
+                                </div>
+                                <div class="blog__texts">
+                                    <h3 class="blog__textP">26 December,2022 </h3>
+                                    <button class="blog__btn"><svg width="10" height="20" viewBox="0 0 10 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__pagination">
+                        <button class="blog__btn-pagination">01</button>
+                        <button class="blog__btn-pagination">02</button>
+                        <button class="blog__btn-pagination">03</button>
+                        <button class="blog__btn-pagination"><svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.55714 15L7.5 8.31429L1.55714 1.62857" stroke="#292F36" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>

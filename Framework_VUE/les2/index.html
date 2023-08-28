@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            width: 350px;
+            height: 200px;
+        }
+        .btn {
+            width: 35px;
+            height: 35px;
+        }
+        .like {
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <article v-for="article in data" :key="article.id" class="article">
+            <h2 class="article__title">{{ article.title }}</h2>
+            <p class="article__text">{{ article.text }}</p>
+            <button class="btn" @click="likeToggle = !likeToggle" :class="{like: likeToggle}">like</button>
+        </article>
+
+
+
+        <h2>list</h2>
+        <ul>
+            <li v-for="item in listItems" :key="item.id">{{ item }}</li>
+        </ul>
+        <input type="text" v-model="newList" @keyup.enter="addItem">
+        <h2>Конструктор</h2>
+        <input type="text" v-model="blockWidth">
+        <input type="text" v-model="blockColor">
+
+        <input type="text" @keyup.enter="send()"> <button @click="send()">Отправить</button>
+
+        <h2>link elem</h2>
+        <a v-bind:href="linkHref">my new link</a>
+        <div class="block" :style="changeBlock">Привет</div>
+        <img :src="imgPhoto" alt="photo">
+
+        <h2>{{ modelData }}</h2>
+        <input type="text" v-model="modelData">
+        <button @click="headingText()" class="heading__button">Click heading</button>
+
+        <h2>калькулятор</h2>
+        <input type="text" v-model.number="firstNum">
+        <input type="text" v-model.number="secondNum">
+        =
+        {{ result }}
+
+        <div>
+            <button @click="plus">+</button>
+            <button @click="minus">-</button>
+            <button @click="mult">*</button>
+            <button @click="div">/</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
