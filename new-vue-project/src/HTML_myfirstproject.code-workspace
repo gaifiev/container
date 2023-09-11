@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "C:/Users/vgaif/Downloads/Telegram Desktop/try2/try2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML_myfirstproject"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+		
+		]
+	}
+}
