@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -591,7 +595,6 @@ body {
 
 .blog-detalis__content {
   display: flex;
-  margin-top: 50px;
 }
 .blog-detalis__items {
   width: 804px;
@@ -770,119 +773,4 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-}
-
-.categories {
-  margin-top: 200px;
-  margin-bottom: 200px;
-}
-.categories__two-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-.categories__item-follow {
-  margin-bottom: 61px;
-}
-.categories__btn-4 {
-  padding: 26px 66px 26px 66px;
-  border-radius: 18px;
-  border: none;
-  cursor: pointer;
-  background-color: #f4f0ec;
-  color: #292f36;
-  transition: all 0.3s;
-  font-family: Jost;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 23px;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
-.categories__btn-4:hover {
-  background: transparent;
-  color: #ffffff;
-  background-color: #cda274;
-}
-.categories__items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 27px;
-  width: 1201px;
-}
-.categories__project {
-  border: 1px solid #e7e7e7;
-  border-radius: 62px 62px 0 0;
-  padding: 10px;
-}
-.categories__sub-content {
-  display: flex;
-  margin-top: 24px;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.categories__photo {
-  border-radius: 50px 50px 0px 0px;
-  max-width: 560px;
-}
-.categories__title-card {
-  font-family: DM Serif Display;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0.02em;
-  text-align: left;
-  width: 305px;
-}
-.categories__textP {
-  font-family: Jost;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  margin-right: 48px;
-  margin-top: 4px;
-  margin-bottom: 9px;
-}
-.categories__btn {
-  display: block;
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.categories__btn:hover {
-  background: transparent;
-  color: white;
-  background-color: #cda274;
-}
-.categories__pagination {
-  display: flex;
-  gap: 30px;
-}
-.categories__btn-pagination {
-  display: block;
-  height: 52px;
-  width: 52px;
-  border-radius: 50%;
-  border: 1px solid #cda274;
-  cursor: pointer;
-  transition: all 0.5s;
-  font-family: Jost;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-.categories__btn-pagination:hover {
-  background: transparent;
-  color: white;
-  background-color: #cda274;
 }/*# sourceMappingURL=style.css.map */

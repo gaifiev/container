@@ -6,16 +6,18 @@
     <CounterComponentVue></CounterComponentVue>
     <BlogComponent></BlogComponent>
     <FooterComponentVue></FooterComponentVue>
+    <categoreis-component></categoreis-component>
   </div>
 </template>
 
 <script>
-import HeaderComponentVue from "./components/blocks/HeaderComponent.vue";
-import TopComponentVue from "./components/blocks/TopComponent.vue";
-import CardsComponentVue from "./components/blocks/CardsComponent.vue";
-import CounterComponentVue from './components/blocks/CounterComponent.vue';
-import BlogComponent from "./components/pages/BlogComponent.vue";
-import FooterComponentVue from './components/blocks/FooterComponent.vue';
+import HeaderComponentVue from "./components/HeaderComponent.vue";
+import TopComponentVue from "./components/TopComponent.vue";
+import CardsComponentVue from "./components/CardsComponent.vue";
+import CounterComponentVue from './components/CounterComponent.vue';
+import BlogComponent from "./components//BlogComponent.vue";
+import FooterComponentVue from './components/FooterComponent.vue';
+import CategoreisComponent from './components/CategoreisComponent.vue';
 
 
 export default {
@@ -27,6 +29,7 @@ export default {
     CounterComponentVue,
     BlogComponent,
     FooterComponentVue,
+    CategoreisComponent,
   },
 };
 
