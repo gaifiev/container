@@ -17,7 +17,7 @@ y = [random.random() for _ in range(100)]
 # метод для расчета корреляции Пирсона
 def pirsonCorrelation(x, y):
     # преобразование в массив
-    x = np.array(x)з
+    x = np.array(x)
     y = np.array(y)
 
     # Вычисляем среднее арифметическое
