@@ -62,7 +62,6 @@ function renderSchedule() {
   });
 }
 
-// Функция для обработки записи на занятие
 function register(index) {
   if (
     scheduleData[index].currentQuantityParticipants <
