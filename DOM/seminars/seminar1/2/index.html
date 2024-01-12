@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="addButton">Добавить элемент</button>
+    <button id="removeButton">Удалить элемент</button>
+    <button id="cloneButton">Клонировать элемент</button>
+    <div id="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+        let count = 3;
+
+        function addBox() {
+            count++;
+            const container = document.getElementById('container');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'box';
+            newDiv.textContent = count;
+            container.appendChild(newDiv);
+        }
+
+        function deleteBox() {
+            const container = document.getElementById('container');
+            const boxes = container.getElementsByClassName('box');
+            
+            if (boxes.length > 0) {
+                container.removeChild(boxes[boxes.length - 1]);
+                count--; // уменьшить счетчик
+            }
+        }
+
+        function cloneBox() {
+            const container = document.getElementById('container');
+            const boxes = container.getElementsByClassName('box');
+
+            if (boxes.length > 0) {
+                const lastBox = boxes[boxes.length - 1];
+                const clonedBox = lastBox.cloneNode(true);
+
+                clonedBox.textContent = lastBox.textContent; // копируем из последнего элемента
+                container.appendChild(clonedBox);
+            }
+        }
+
+        // привязываем события к кнопкам по id
+        document.getElementById('addButton').addEventListener('click', addBox);
+        document.getElementById('removeButton').addEventListener('click', deleteBox);
+        document.getElementById('cloneButton').addEventListener('click', cloneBox);
+    </script>
+</body>
+
+</html>

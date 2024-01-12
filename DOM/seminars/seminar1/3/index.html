@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .btn {
+            margin: 10px;
+        }
+        .card {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn btn-primary" onclick="addNewArticle()">Добавить статью</button>
+
+        <div class="article-container"></div>
+        
+    </div>
+    <script>
+        const articlesData = [
+            {
+                title: 'Заголовок статьи 1',
+                content: 'Содержание статьи 1'
+            },
+            {
+                title: 'Заголовок статьи 2',
+                content: 'Содержание статьи 2'
+            }
+        ];
+
+        // пробегаем по массиву и добавляем их в контейнер
+        const container = document.querySelector('.article-container');
+        
+        articlesData.forEach(article => {
+            const articleDiv = createArticleDiv(article);
+            container.appendChild(articleDiv);
+        });
+
+       // создаме див элемент для статьи
+        function createArticleDiv(article) {
+            const articleDiv = document.createElement('div');
+            articleDiv.classList.add('card');
+
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+            // заголовок
+            const title = document.createElement('h2');
+            title.classList.add('card-title');
+            title.textContent = article.title;
+            // текст
+            const content = document.createElement('p');
+            content.classList.add('card-text');
+            content.textContent = article.content;
+
+            // удалить
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('btn', 'btn-danger');
+            deleteButton.textContent = 'Удалить';
+            deleteButton.addEventListener('click', () => deleteArticle(articleDiv));
+            // добавим элементы в DOM
+            cardBody.appendChild(title);
+            cardBody.appendChild(content);
+            cardBody.appendChild(deleteButton);
+            articleDiv.appendChild(cardBody);
+
+            return articleDiv;
+        }
+
+        function addNewArticle() {
+            const newArticle = { title: "Новая статья", content: "Введите содержание статьи..." };
+            const newArticleDiv = createArticleDiv(newArticle);
+
+            // добавляем новую статью в контейнер
+            container.appendChild(newArticleDiv);
+        }
+
+        function deleteArticle(articleDiv) {
+            // удаляем статью
+            container.removeChild(articleDiv);
+        }
+    </script>
+
+</body>
+
+</html>
