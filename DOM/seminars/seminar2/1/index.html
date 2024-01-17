@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: #2b2a2a;
+        }
+
+        .nav-link:hover {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        .nav-link.active {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p>1. Подсветка активного пункта: При клике на пункт меню он
+        должен становиться активным, и для активного пункта должен
+        применяться определенный стиль (например, изменение цвета
+        фона). Если выбрать другой пункт, предыдущий должен
+        перестать быть активным. <br>
+        2. Эффекты наведения: При наведении курсора на пункты меню
+        должны применяться эффекты (например, изменение цвета
+        текста или фона) для подсказки пользователю, что пункт меню
+        является интерактивным.
+    </p>
+    <nav>
+        <a href="#" class="nav-link" onclick="active(this)">Главная</a>
+        <a href="#" class="nav-link" onclick="active(this)">О нас</a>
+        <a href="#" class="nav-link" onclick="active(this)">Услуги</a>
+        <a href="#" class="nav-link" onclick="active(this)">Контакты</a>
+    </nav>
+
+    <script>
+        function active(element) {
+            const links = document.getElementsByClassName("nav-link");
+            
+            for (i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+            element.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

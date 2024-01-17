@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #modal.active {
+      display: block;
+    }
+
+    #closeBtn {
+      cursor: pointer;
+      color: #333;
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+</style>
+<body>
+    <p>Задание 2 (тайминг 15 минут)
+        Создайте простое модальное окно, которое появляется при клике на кнопку "Открыть
+        модальное окно" и закрывается при клике на кнопку "Закрыть". Модальное окно
+        должно содержать заголовок "Модальное окно" и кнопку для закрытия.
+        <br>
+        * Модальное окно должно плавно появляться и исчезать при открытии и закрытии.
+    </p>
+
+    <button onclick="openModal()">Открыть модальное окно</button>
+
+    <div id="modal">
+        <h2>Модальное окно</h2>
+        <button id="closeBtn" onclick="closeModal()">Закрыть</button>
+    </div>
+
+    <!-- <button class="open">Открыть модальное окно</button>
+
+    <div id="modal">
+        <h2>Модальное окно</h2>
+    </div> -->
+    <script>
+        // const modal = document.getElementById(modal);
+        // const openModal = document.querySelector('.open');
+
+        // openModal.addEventListener('click', function () {
+        //     modal.style.display = 'block';
+        // });
+
+        // document.addEventListener('mousedown', function (event) {
+        //     if (!modal.contains(event.target) && event.target !== openModal) {
+        //         modal.style.display = 'none'
+        //     }
+        // });
+
+        function openModal() {
+            const modal = document.getElementById("modal");
+            modal.classList.add("active");
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.classList.remove("active");
+        }
+
+    </script>
+</body>
+
+</html>

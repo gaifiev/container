@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<style>
+    .slider {
+        width: 100%;
+        max-width: 373px;
+        overflow: hidden;
+        margin: auto;
+
+    }
+
+    .slide {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    #box {
+        display: flex;
+        transition: all 0.5s;
+    }
+
+
+
+    .dot-box {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .active-dot {
+        background-color: #3776ff;
+    }
+
+    .box-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .button-previous {
+
+        cursor: pointer;
+        font-size: 18px;
+        background-color: #0059ff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        position: relative;
+    }
+
+    .button-next {
+
+        cursor: pointer;
+        font-size: 18px;
+        background-color: #0059ff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        margin: 10px 10px;
+
+    }
+</style>
+
+<body>
+    <p>Вашей задачей является создание веб-слайдера для отображения изображений на веб-странице. <br> Слайдер должен
+        позволять переключаться между изображениями и отображать их в центре экрана.
+        <br>
+        1. Создайте интерфейс веб-страницы, который включает в себя следующие элементы:
+        <br>
+        a. Контейнер для отображения текущего изображения.<br>
+        b. Кнопки "Предыдущее изображение" и "Следующее изображение" для переключения между изображениями.<br>
+        c. Навигационные точки (индикаторы) для быстрого переключения между изображениями.<br>
+
+        2. Используйте HTML для создания элементов интерфейса.<br>
+
+        3. Используйте JavaScript для обработки событий:<br>
+
+        a. При клике на кнопку "Предыдущее изображение" должно отображаться предыдущее изображение.<br>
+        b. При клике на кнопку "Следующее изображение" должно отображаться следующее изображение.<br>
+        c. При клике на навигационные точки, слайдер должен переключаться к соответствующему изображению.
+    </p>
+    <div class="slider">
+        <div id="box">
+            <div class="slide"><img src="./img/doctor1.png" alt="photo"></div>
+            <div class="slide"><img src="./img/doctor2.png" alt="photo"></div>
+            <div class="slide"><img src="./img/doctor3.png" alt="photo"></div>
+            <div class="slide"><img src="./img/doctor4.png" alt="photo"></div>
+            <div class="slide"><img src="./img/image1.png" alt="photo"></div>
+            <div class="slide"><img src="./img/image2.png" alt="photo"></div>
+            <div class="slide"><img src="./img/image3.png" alt="photo"></div>
+        </div>
+        <div class="dot-box">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <div class="box-btn">
+        <button class="button-previous" id="previous-btn">Предыдущее изображение</button>
+        <button class="button-next" id="next-btn">Следующее изображение</button>
+    </div>
+
+
+    <script src="1.js"></script>
+</body>
+
+</html>

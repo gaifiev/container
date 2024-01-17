@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p>1.Создайте интерфейс с несколькими вопросами и вариантами ответов. Каждый вопрос должен
+        иметь несколько вариантов ответов. <br>
+        2. Реализуйте обработку событий, чтобы пользователи могли выбирать варианты ответов.<br>
+        3. Добавьте кнопку "Завершить опрос", которая будет показывать результаты опроса.<br>
+        4. При нажатии на кнопку "Завершить опрос", вы должны проверить, что пользователь ответил на все
+        вопросы, и отобразить выбранные им варианты ответов.<br>
+        5. Если пользователь не ответил на все вопросы, покажите ему сообщение о необходимости ответить
+        на все вопросы перед завершением опроса.</p>
+    <div class="survey-container">
+        <div id="question1" class="question">
+            <h1>1. Какой ваш любимый цвет?</h1>
+            <label>
+                <input type="radio" name="1" value="Синий">Синий
+            </label>
+            <label>
+                <input type="radio" name="1" value="Зеленый">Зеленый
+            </label>
+            <label>
+                <input type="radio" name="1" value="Красный">Красный
+            </label>
+
+        </div>
+
+        <div id="question2" class="question">
+            <h1>2. Какое ваше любимое животное?</h1>
+            <label>
+                <input type="radio" name="2" value="Собака">Собака
+            </label>
+            <label>
+                <input type="radio" name="2" value="Попугай">Попугай
+            </label>
+            <label>
+                <input type="radio" name="2" value="Кот">Кот
+            </label>
+        </div>
+
+        <button id="submitBtn">Завершить опрос</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        // первый вариант решения
+        document.getElementById('submitBtn').addEventListener('click', showResults);
+
+        function showResults() {
+            const questions = document.querySelectorAll('.question');
+            let allAnswered = true;
+            let resultText = '<h2>Результаты опроса:</h2>';
+
+            questions.forEach((question, index) => {
+                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                if (selectedOption) {
+                    resultText += `<p>Вопрос ${index + 1}: ${selectedOption.value}</p>`;
+                } else {
+                    allAnswered = false;
+                }
+            });
+
+            const resultContainer = document.getElementById('result');
+
+            if (allAnswered) {
+                resultContainer.innerHTML = resultText;
+            } else {
+                resultContainer.innerHTML = '<p style="color: red;">Пожалуйста, ответьте на все вопросы перед завершением опроса.</p>';
+            }
+        }
+
+        
+        // второй вариант решения
+        const submitButton = document.getElementById('submit');
+        const resultContainer = document.querySelector('.result');
+        const resultQ1 = document.getElementById('result-q1').querySelector('span');
+        const resultQ2 = document.getElementById('result-q2').querySelector('span');
+
+        submitButton.addEventListener('click', function () {
+            // Собираем ответы
+            const q1Answer = document.querySelector('input[name="q1"]:checked');
+            const q2Answer = document.querySelector('input[name="q2"]:checked');
+
+            if (q1Answer && q2Answer) {
+                // Отображаем результаты
+                resultQ1.textContent = q1Answer.value;
+                resultQ2.textContent = q2Answer.value;
+                resultContainer.style.display = 'block';
+
+                // Дополнительные действия, например, отправка результатов на сервер
+            } else {
+                alert('Пожалуйста, ответьте на все вопросы.');
+            }
+        });
+    </script>
+</body>
+
+</html>
